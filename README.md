@@ -37,7 +37,7 @@ give it a second to start processing the stream and you should see a "live" obje
 ![Marks](https://img.shields.io/badge/Raspberry%20Pi-3%20B-blue.svg)
 ![Marks](https://img.shields.io/badge/Raspbian-Stretch%20Light-blue.svg)
 ![Marks](https://img.shields.io/badge/OpenCV-4.0.0-orange.svg)
-![Marks](https://img.shields.io/david/expressjs/express.svg)
+![Marks](https://img.shields.io/badge/license%MITLight-blue.svg)
 ![Marks](https://img.shields.io/apm/l/:package.svg)
 ![Marks](https://img.shields.io/pypi/pyversions/Django.svg)
 ![Marks](https://img.shields.io/pypi/status/Django.svg)
