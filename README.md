@@ -1,9 +1,9 @@
 # pi_security_opencv_stream
-Using Raspberry Pi 3 with Stretch Light to detect objects as smoothly as possible and output a stream.
+Using Raspberry Pi 3 with Stretch Lite to detect objects as smoothly as possible and output a stream.
 
 ## ABOUT
 
-This project was put together using guides written by Adrian on www.pyimagesearch.com along with guides written by Migual on blog.miguelgrinberg.com. The challenge was getting everything setup on a Raspberry Pi 3 using Stretch Light OS. Once opencv was setup the second challeng was to capture a camera rtsp stream, process it thru opencv to recognize the objects and then output a stream for clien side to access. All of this to run locally on the pi at optimal speeds.
+This project was put together using guides written by Adrian on www.pyimagesearch.com along with guides written by Migual on blog.miguelgrinberg.com. The challenge was getting everything setup on a Raspberry Pi 3 using Stretch Lite OS. Once opencv was setup the second challeng was to capture a camera rtsp stream, process it thru opencv to recognize the objects and then output a stream for clien side to access. All of this to run locally on the pi at optimal speeds.
 
 ## Dependency
 
@@ -35,7 +35,7 @@ give it a second to start processing the stream and you should see a "live" obje
 ## Versions
 
 ![Marks](https://img.shields.io/badge/Raspberry%20Pi-3%20B-blue.svg)
-![Marks](https://img.shields.io/badge/Raspbian-Stretch%20Light-blue.svg)
+![Marks](https://img.shields.io/badge/Raspbian-Stretch%20Lite-blue.svg)
 ![Marks](https://img.shields.io/badge/OpenCV-4.0.0-orange.svg)
 ![Marks](https://img.shields.io/badge/license-MIT-orange.svg)
 ![Marks](https://img.shields.io/pypi/pyversions/Django.svg)
