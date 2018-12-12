@@ -40,6 +40,7 @@ def classify_frame(net, inputQueue, outputQueue):
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
+ap.add_argument("-ip", "--address", required=True, help="enter your local/home IP address")
 ap.add_argument("-p", "--prototxt", required=True,
 	help="path to Caffe 'deploy' prototxt file")
 ap.add_argument("-m", "--model", required=True,
@@ -165,4 +166,4 @@ def processed():
                 mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-	app.run(host='192.168.0.53', debug=True, threaded=True)
+	app.run(host=args['address'], debug=True, threaded=True)
