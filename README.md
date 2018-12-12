@@ -17,20 +17,41 @@ numpy
 argparse
 ```
 
-## Setup
+## Setup for intense\_version
 
 Follow the guide on pyimagesearch to setup opencv on a raspberry pi in a python enviroment.  
-Change the IP host at the bottom of main.py to match the raspberry pi IP.
-Once you're setup run the following
+Once you're setup run the following while in the python enviroment you created following the tutorials.
 ```
-python main.py --prototext <prototext_here> --model <caffemodel_here>
+python main.py --prototext <prototext_here> --model <caffemodel_here> -ip <your_local_ip>
 ```
-this will start the application.  
+this will start the server.  
 To view the stream click on a prefered browser and enter the following URL into it.
 ```
-http://<your raspberry IP>:5000
+http://<IP given>:5000
 ```
 give it a second to start processing the stream and you should see a "live" object detection stream.
+
+## Setup for light\_version
+
+Follow the guide on pyimagesearch to setup opencv on a raspberry pi in a python enviroment.  
+Once you're setup run the following while in the python enviroment you created following the tutorials.
+```
+python main.py --cascade <chosen_cascade> -ip <your_local_ip>
+```
+this will start the server.  
+To view the stream click on a prefered browser and enter the following URL into it.
+```
+http://<IP given>:5000
+```
+give it a second to start processing the stream and you should see a "live" object detection stream.
+
+## NOTES
+
+if you're trying to run this on a macOS and it complains about a fork() issue run the following command
+```
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+```
+the new macOS comes with a security update that affect the way fork() works.
 
 ## Versions
 
