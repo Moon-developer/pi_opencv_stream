@@ -47,6 +47,7 @@ ap.add_argument("-m", "--model", required=True,
 	help="path to Caffe pre-trained model")
 ap.add_argument("-c", "--confidence", type=float, default=0.2,
 	help="minimum probability to filter weak detections")
+ap.add_argument("-cm", "--compare", type=int, default=0)
 args = vars(ap.parse_args())
 
 # initialize the list of class labels MobileNet SSD was trained to
@@ -88,12 +89,11 @@ def gen():
 		sys.exit("No ip stream found.")
 	time.sleep(2.0)
 	while True:
-
-
 		# grab the frame from the threaded video stream, resize it, and
 		# grab its dimensions
 		ret, frame = vs.read()
-		ret, original = vs.read()
+                if args["compare"] == 1:
+		    original = frame.copy()
 		#frame = imutils.resize(frame, width=400)
 		(fH, fW) = frame.shape[:2]
 		# if the input queue *is* empty, give the current frame to
@@ -135,9 +135,12 @@ def gen():
 					#cv2.putText(frame, label, (startX, y),
 					#	cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
                 # concatenate original and processed frame for viewing
-                final = np.concatenate((frame, original), axis=1)
-		# create jpeg frame for our index.html
-		ret, jpeg = cv2.imencode('.jpg', final)
+                if args["compare"] == 1:
+                    final = np.concatenate((frame, original), axis=1)
+		    # create jpeg frame for our index.html
+		    ret, jpeg = cv2.imencode('.jpg', final)
+                else:
+		    ret, jpeg = cv2.imencode('.jpg', frame)
 		htmlframe = jpeg.tobytes()
 		yield (b'--frame\r\n'
 			b'Content-Type: image/jpeg\r\n\r\n' + htmlframe + b'\r\n\r\n')
