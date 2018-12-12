@@ -22,7 +22,7 @@ argparse
 Follow the guide on pyimagesearch to setup opencv on a raspberry pi in a python enviroment.  
 Once you're setup run the following while in the python enviroment you created following the tutorials.
 ```
-python main.py --prototext <prototext_here> --model <caffemodel_here> -ip <your_local_ip>
+python main.py --prototext <prototext_here> --model <caffemodel_here> -ip <your_local_ip> --compare <defualt: 0, set to 1 to stream live comparison>
 ```
 this will start the server.  
 To view the stream click on a prefered browser and enter the following URL into it.
