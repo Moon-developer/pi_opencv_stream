@@ -1,6 +1,10 @@
 # pi_opencv_stream
 Using Raspberry Pi 3 with Stretch Lite to detect objects as smoothly as possible and output a stream.
 
+## Research
+
+Months worth of links collection that led to learning about ML can be viewed in ML_links.md
+
 ## ABOUT
 
 This project was put together using guides written by Adrian on www.pyimagesearch.com along with guides written by Migual on blog.miguelgrinberg.com. The challenge was getting everything setup on a Raspberry Pi 3 using Stretch Lite OS. Once opencv was setup the second challeng was to capture a camera rtsp stream, process it thru opencv to recognize the objects and then output a stream for clien side to access. All of this to run locally on the pi at optimal speeds.
