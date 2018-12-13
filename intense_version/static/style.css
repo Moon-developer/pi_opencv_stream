@@ -16,5 +16,5 @@
     border: 1px solid red;
 }
 .video_viewport img {
-    width: 100%;
+    height: 100%;
 }
